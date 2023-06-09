@@ -1,3 +1,24 @@
+@mixin mobile{
+  @media screen and (max-width:600px) {
+     @content
+  }
+  
+}
+
+@mixin tablet{
+  @media screen and (max-width:768px) {
+     @content
+  }
+  
+}
+
+
+@mixin laptop{
+  @media screen and (max-width:1200px) {
+     @content
+  }
+  
+}
 .formcontainer {
   background-color: #a7bcff;
   height: 100vh;
@@ -65,9 +86,17 @@
       flex: 1;
       border-right: 1px solid #3e3c61;
       background-color: #3e3c61;
+      @include mobile{
+        width: 12vw;
+      }
 
       .logo {
         font-weight: bold;
+        @include tablet{
+          display: none;
+        }
+
+
       }
       .user {
         display: flex;
@@ -156,6 +185,9 @@
     .chatname {
       font-size: 18px;
       font-weight: 500;
+      @include mobile{
+        font-size: 12px;
+      }
     }
     .chatmsg {
       font-size: 14px;

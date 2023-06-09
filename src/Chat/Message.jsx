@@ -11,20 +11,20 @@ function Message({ message}) {
   return (
     <div className={`message  ${message.senderId === currentUser.uid && "owner"}` }>
       <div className="message info">
-        <img
+        {/* <img className="img-fluid"
           src={
             message.senderId === currentUser.uid
               ? currentUser.photoURL
               : data.user.photoURL
           }
-          alt="" width={40}
-        />
+          alt=""
+        /> */}
         <span className="mt-3">Just now</span>
       </div>
       <div className="messagecontent">
         <p>{message.text}</p>
         
-        { message.img && <img src={message.img} alt="" width={200} />}
+        { message.img && < img src={message.img} className="img-fluid" alt="" width={200} />}
       </div>
       
     </div>
