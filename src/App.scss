@@ -1,0 +1,238 @@
+.formcontainer {
+  background-color: #a7bcff;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .formwrapper {
+    background-color: white;
+    padding: 20px 100px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .login {
+      text-decoration: none;
+    }
+    .logo {
+      color: #5d5b8d;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      .signupbutton {
+        background-color: #7b96ec;
+        color: white;
+        padding: 7px;
+        border: none;
+      }
+      label {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      font-size: 12px;
+      cursor: pointer;
+      .username {
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        padding: 10px;
+        ::placeholder {
+          color: #5d5b8d;
+        }
+      }
+    }
+  }
+}
+
+.home {
+  background-color: #a7bcff;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  .container {
+    // border: 1px solid white;
+    border-radius: 10px;
+    height: 80%;
+    display: flex;
+    overflow: hidden;
+
+    .sidebar {
+      flex: 1;
+      border-right: 1px solid #3e3c61;
+      background-color: #3e3c61;
+
+      .logo {
+        font-weight: bold;
+      }
+      .user {
+        display: flex;
+        gap: 10px;
+      }
+
+      img {
+        background-color: #ddddf7;
+        height: 33px;
+        width: 33px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+
+      button {
+        background-color: #7b96ec;
+        border: none;
+        border-radius: 10px;
+        color: white;
+        cursor: pointer;
+      }
+    }
+
+    .chat {
+      flex: 2;
+      .chatuserinfo {
+        background-color: #5d5b8d;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px;
+        color: lightgray;
+      }
+    }
+  }
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #3b3975;
+  height: 50px;
+  color: white;
+}
+
+.search {
+  border-bottom: 1px solid gray;
+  .searchForm {
+    padding: 10px;
+    input {
+      background-color: transparent;
+      border: none;
+      color: white;
+      outline: none;
+
+      &::placeholder {
+        color: lightgray;
+      }
+    }
+  }
+  .userchat {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    cursor: pointer;
+    &:hover {
+      background-color: #5d5b8d;
+    }
+  }
+}
+
+.chats {
+  .userchat {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    cursor: pointer;
+    &:hover {
+      background-color: #5d5b8d;
+    }
+    .chatname {
+      font-size: 18px;
+      font-weight: 500;
+    }
+    .chatmsg {
+      font-size: 14px;
+      color: lightgray;
+    }
+  }
+}
+
+.messages {
+  background-color: #ddddf7;
+  padding: 10px;
+  height: calc(100% - 95px);
+  overflow-y: scroll;
+}
+
+.input {
+  background-color: white;
+  height: 50px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  input {
+    width: 100%;
+    border: none;
+    outline: none;
+    color: #2f2d52;
+    font-size: 18px;
+    &::placeholder {
+      color: lightgray;
+    }
+  }
+  .send {
+    display: flex;
+
+    align-items: center;
+    gap: 10px;
+    button {
+      border: none;
+      color: white;
+      padding: 5px 10px;
+      background-color: #8da4f1;
+    }
+  }
+}
+
+.message {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+  &.owner {
+    flex-direction: row-reverse;
+  }
+  .messageinfo {
+    display: flex;
+    flex-direction: column;
+    color: gray;
+    font-weight: 300;
+    img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+  }
+  .messagecontent {
+    max-width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-end;
+    p {
+      padding: 10px;
+      border-radius: 10px 0px 10px 10px;
+      background-color: #8da4f1;
+      color: white;
+      max-width: max-content;
+    }
+  }
+}
