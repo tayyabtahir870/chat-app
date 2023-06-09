@@ -76,8 +76,8 @@ function Input() {
       <input className='type' type="text" placeholder='Type Something..' onChange={e=>setText(e.target.value)} value={text}  />
       <div className="send">
         <img src="" alt="" />
-        <input type="file" id='picture' style={{display:"none"}}  onChange={e=>setImg(e.target.files[0])}  />
-        <label htmlFor="picture"><img src="Assests/profile.png"  className='img-fluid' alt="" /></label>
+        <input  type="file" id='picture' style={{display:"none"}}  onChange={e=>setImg(e.target.files[0])}  />
+        <label className='inputlabel img-fluid' htmlFor="picture"><img src="Assests/profile.png"   alt="" /></label>
         <button onClick={handleSend} >Send</button>
       </div>
       </div>

@@ -41,7 +41,7 @@ function Chats() {
 
      
       <div className="userchat" key={chat[0]}  onClick={()=>handleSelect(chat[1].userInfo)} >
-        <img src={chat[1].userInfo.photoURL} alt="" />
+        <img className="chatimage" src={chat[1].userInfo.photoURL} alt="" />
         <div className="userinfo">
           <span className="chatname">{chat[1].userInfo.displayName}</span>
           <p className="chatmsg">{chat[1].lastMessage?.text}</p>
