@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react';
 import { AuthContext } from '../Context/AuthContext';
 import { ChatContext } from '../Context/ChatContext';
-
+import {FcPicture} from "react-icons/fc";
 import { Timestamp, arrayUnion, doc, serverTimestamp, updateDoc } from 'firebase/firestore';
 import { db, storage } from '../firebase';
 import { v4 as uuid } from 'uuid';
@@ -19,6 +19,7 @@ function Input() {
 
 
   const handleSend = async()=>{
+    
     if(img){
       const storageRef = ref(storage, uuid());
 
@@ -77,7 +78,7 @@ function Input() {
       <div className="send">
         <img src="" alt="" />
         <input  type="file" id='picture' style={{display:"none"}}  onChange={e=>setImg(e.target.files[0])}  />
-        <label className='inputlabel img-fluid' htmlFor="picture"><img src="Assests/profile.png"   alt="" /></label>
+        <label  htmlFor="picture"><FcPicture className='icon' size={40}/></label>
         <button onClick={handleSend} >Send</button>
       </div>
       </div>

@@ -178,6 +178,7 @@
 }
 
 .chats {
+  
   .userchat {
     padding: 10px;
     display: flex;
@@ -192,16 +193,26 @@
       font-size: 18px;
       font-weight: 500;
       @include mobile{
-        font-size: 16px;
+        font-size: 13px;
       }
     }
     .chatmsg {
       font-size: 14px;
       color: lightgray;
+      text-overflow: ellipsis; 
+      width: 100px; 
+      white-space: nowrap; 
+      overflow:hidden; 
+      @include mobile{
+        text-overflow: ellipsis; 
+        width: 55px; 
+        white-space: nowrap; 
+        overflow:hidden; 
+      }
     }
     .chatimage{
       @include mobile{
-        margin-bottom: 14PX;
+        margin-bottom: 14px;
       }
     }
   }
@@ -221,6 +232,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  
+ 
+
   input {
     width: 100%;
     border: none;
@@ -230,25 +244,29 @@
     &::placeholder {
       color: lightgray;
     }
-    .inputlabel{
-      @include mobile{
-        width: 16vw;
-      }
+ 
     }
+    
   }
   .send {
     display: flex;
 
     align-items: center;
     gap: 10px;
+    
     button {
       border: none;
       color: white;
       padding: 5px 10px;
       background-color: #8da4f1;
+      border-radius: 6px;
+      @include mobile{
+        padding: 3px 6px;
+      }
     }
+
   }
-}
+
 
 .message {
   display: flex;
@@ -262,25 +280,47 @@
     flex-direction: column;
     color: gray;
     font-weight: 300;
-    img {
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      object-fit: cover;
-    }
+    
   }
+  .img1{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
   .messagecontent {
-    max-width: 80%;
+    max-width: 50%;
     display: flex;
     flex-direction: column;
     gap: 10px;
     align-items: flex-end;
+   
+   
     p {
       padding: 10px;
       border-radius: 10px 0px 10px 10px;
       background-color: #8da4f1;
       color: white;
       max-width: max-content;
+      text-overflow: ellipsis; 
+    width: 650px; 
+    white-space: nowrap; 
+    overflow:hidden; 
+
+    @include mobile{
+      text-overflow: ellipsis; 
+      width: 100px; 
+      white-space: nowrap; 
+      overflow:hidden; 
     }
+   
+  
+    }
+
+    
+
+   
   }
+
 }
